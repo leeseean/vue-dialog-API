@@ -80,10 +80,24 @@ header {
 
 .content-2 {
     height: 368px;
-    background-image: url(../img/title_2bg.jpg);
-    background-repeat: no-repeat;
     position: relative;
     z-index: 2;
+    background-image: url(../img/title_2bg.jpg);
+    background-repeat: no-repeat;
+}
+
+.content-2-inner-wrapper {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: url(../img/title_2bg.jpg);
+    background-repeat: no-repeat;
+}
+
+.content-2-video {
+    position: relative;
 }
 
 .video-min-title {
@@ -95,6 +109,10 @@ header {
     top: 50px;
 }
 
+.hide {
+    display: none;
+}
+
 .btn-video {
     width: 96px;
     height: 96px;
@@ -102,6 +120,7 @@ header {
     position: absolute;
     left: 171px;
     top: 156px;
+    cursor: pointer;
 }
 
 .title-2 {
@@ -454,6 +473,11 @@ footer {
     background: url(../img/css_set.png) no-repeat;
     background-position: 0 -168px;
     margin-top: 10px;
+    opacity: 0;
+}
+
+.right-fixed-div5.show {
+    opacity: 1;
 }
 
 /* right-fixed */
@@ -462,9 +486,9 @@ footer {
 /* scroll-bar */
 .scroll-wrapper {
     position: absolute;
-    top: 0;
+    top: 18px;
     right: -36px;
-    height: 720px;
+    height: 684px;
     width: 18px;
     background-image: url(../img/image_track.svg);
     background-position: top center;
@@ -481,11 +505,11 @@ footer {
 }
 
 .top-dot {
-    top: 0;
+    top: -18px;
 }
 
 .bottom-dot {
-    bottom: 0;
+    bottom: -18px;
 }
 
 .scroll-bar {
