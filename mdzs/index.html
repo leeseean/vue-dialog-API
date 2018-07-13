@@ -6,13 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/dialog.css">
     <link rel="stylesheet" href="./css/index.css">
     <title>摩登娱乐 耀世2018</title>
 </head>
 
 <body>
-    <header>
+    <header id="header">
         <div class="clearfix head-wrapper">
             <div class="clearfix fl head-left">
                 <div class="fl head-logo"></div>
@@ -31,23 +30,30 @@
             <div class="main-fire"></div>
             <div class="main-title"></div>
         </div>
-        <div class="content-2">
+        <div class="content-2" id="video">
             <div class="video-min-title"></div>
             <div class="btn-video"></div>
             <div class="title-2"></div>
         </div>
-        <div class="content-3">
+        <div class="content-3" id="images">
             <div class="content-3-text">
                 <p style="position: relative;left: 2px;">摩登盛典精彩图赏</p>
                 <div class="title-bottom-bar"></div>
             </div>
-            <div class="img-box-wrapper">
-                <div class="img-box">
-                    <div class="js-masonry masonry"></div>
+            <div class="img-box-outter-wrapper">
+                <div class="img-box-wrapper">
+                    <div class="img-box">
+                        <div class="js-masonry masonry"></div>
+                    </div>
+                </div>
+                <div class="scroll-wrapper">
+                    <div class="top-dot"></div>
+                    <div class="bottom-dot"></div>  
+                    <div class="js-scroll-bar scroll-bar"></div>                  
                 </div>
             </div>
         </div>
-        <div class="content-4">
+        <div class="content-4" id="introduction">
             <div class="title-3"></div>
             <div class="content-4-text">
                 <p class="title-self">盛世摩登 耀世登场</p>
@@ -80,9 +86,15 @@
                 </div>
             </div>
         </div>
+        <div class="js-right-fixed right-fixed">
+            <a class="right-fixed-item right-fixed-div1"></a>
+            <a class="right-fixed-item right-fixed-div2" href="#video"></a>
+            <a class="right-fixed-item right-fixed-div3" href="#images"></a>
+            <a class="right-fixed-item right-fixed-div4" href="#introduction"></a>
+            <a class="right-fixed-item right-fixed-div5" href="#header"></a>
+        </div>
     </footer>
     <script src="./js/vendor/jquery.min.js"></script>
-    <script src="./js/vendor/dialog.js"></script>
     <script src="./js/index.js"></script>
 </body>
 
