@@ -376,12 +376,16 @@ footer {
 }
 
 .ui-dialog {
-    position: fixed;
+    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     transition: all .3s ease-in-out;
     z-index: 1028;
+}
+
+.ui-dialog.show {
+    display: block;
 }
 
 .ui-dialog-close {

@@ -65,48 +65,82 @@
       });
     },
     initGoToTop() {
-        $(window).scroll(() => {
-            if ($(window).scrollTop() > 300) {
-                $('.js-to-top').addClass('show');
-            } else {
-                $('.js-to-top').removeClass('show');
-            }
-        });
+      $(window).scroll(() => {
+        if ($(window).scrollTop() > 300) {
+          $('.js-to-top').addClass('show');
+        } else {
+          $('.js-to-top').removeClass('show');
+        }
+      });
     },
     initVideo() {
-        $('.js-video-btn').off('click').on('click', function() {
-            $('.js-video-bro').addClass('hide');
-            $('.js-video').removeClass('hide');
-            $('.js-video')[0].play();
-        });
-        $('.js-video')[0].addEventListener('ended', function () {  
-            $(this).addClass('hide');
-            $('.js-video-bro').removeClass('hide');            
-        }, false);
+      $('.js-video-btn').off('click').on('click', function () {
+        $('.js-video-bro').addClass('hide');
+        $('.js-video').removeClass('hide');
+        $('.js-video')[0].play();
+      });
+      $('.js-video')[0].addEventListener('ended', function () {
+        $(this).addClass('hide');
+        $('.js-video-bro').removeClass('hide');
+      }, false);
     }
   };
 
 
   _obj.init();
 
-  function dialog(config) {
-    const content = `
+  function dialog({
+    content = '',
+    mask = false,
+    fixed = false,
+  }) {
+    const $content = $(`
             <div class="ui-dialog">
                 <div class="ui-dialog-close">x</div>
-                ${config.content ? config.content: ''}
+                ${content ? content: ''}
             </div>
-        `;
+        `);
+    if (fixed) {
+      $content.css({
+        top: '50%',
+        position: 'fixed'
+      });
+    } else {
+      $content.css({
+        top: getScrollTop() + getViewPortHeight() / 2,
+      });
+    }
     return {
       show() {
-        if (config.mask) {
+        if (mask) {
           $('body').append(`<div class="mask"></div>`);
         }
-        $('body').append(content);
+        $('body').append($content);
+
         $('.ui-dialog-close').off('click').on('click', () => {
           $('.mask').hide().remove();
-          $('.ui-dialog').hide().remove();
+          $content.hide().remove();
         });
       }
     };
   }
 })();
+// 获取浏览器窗口的可视区域的宽度
+function getViewPortWidth() {
+  return document.documentElement.clientWidth || document.body.clientWidth;
+}
+
+// 获取浏览器窗口的可视区域的高度
+function getViewPortHeight() {
+  return document.documentElement.clientHeight || document.body.clientHeight;
+}
+
+// 获取浏览器窗口水平滚动条的位置
+function getScrollLeft() {
+  return document.documentElement.scrollLeft || document.body.scrollLeft;
+}
+
+// 获取浏览器窗口垂直滚动条的位置
+function getScrollTop() {
+  return document.documentElement.scrollTop || document.body.scrollTop;
+}
