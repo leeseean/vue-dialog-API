@@ -1,3 +1,47 @@
+if (!Array.prototype.fill) {
+  Object.defineProperty(Array.prototype, 'fill', {
+    value: function (value) {
+
+      // Steps 1-2.
+      if (this == null) {
+        throw new TypeError('this is null or not defined');
+      }
+
+      var O = Object(this);
+
+      // Steps 3-5.
+      var len = O.length >>> 0;
+
+      // Steps 6-7.
+      var start = arguments[1];
+      var relativeStart = start >> 0;
+
+      // Step 8.
+      var k = relativeStart < 0 ?
+        Math.max(len + relativeStart, 0) :
+        Math.min(relativeStart, len);
+
+      // Steps 9-10.
+      var end = arguments[2];
+      var relativeEnd = end === undefined ?
+        len : end >> 0;
+
+      // Step 11.
+      var final = relativeEnd < 0 ?
+        Math.max(len + relativeEnd, 0) :
+        Math.min(relativeEnd, len);
+
+      // Step 12.
+      while (k < final) {
+        O[k] = value;
+        k++;
+      }
+
+      // Step 13.
+      return O;
+    }
+  });
+}
 (() => {
   const _obj = {
     init() {
@@ -5,6 +49,7 @@
       this.initRightFixedPosition();
       this.initGoToTop();
       this.initVideo();
+      this.initMoveByMouse();
     },
     initMasonry() {
       const horizontalImgs = Array(41).fill(0).map((item, index) => {
@@ -83,6 +128,31 @@
         $(this).addClass('hide');
         $('.js-video-bro').removeClass('hide');
       }, false);
+    },
+    initMoveByMouse() { //鼠标移动到区域 里面的图片运动
+      $('.js-content-1').mousemove(function (event) {
+        const width = $(this)[0].offsetWidth;
+        const height = $(this)[0].offsetHeight;
+        const X = event.offsetX;
+        const Y = event.offsetY;
+        const fireWidth = $('.js-main-fire')[0].offsetWidth;
+        const fireHeight = $('.js-main-fire')[0].offsetHeight;
+        const titleWidth = $('.js-main-title')[0].offsetWidth;
+        const titleHeight = $('.js-main-title')[0].offsetHeight;
+        $('.js-main-fire').css({
+          transform: `translate(${-fireWidth/2 - 50*(X-width/2)/width}px, ${-fireHeight/2 - 50*(Y-height/2)/height}px)`
+        });
+        $('.js-main-title').css({
+          transform: `translate(${-titleWidth/2 + 100*(X-width/2)/width}px, ${-titleHeight/2 + 100*(Y-height/2)/height}px)`
+        });
+      }).mouseleave(function () {
+        $('.js-main-fire').css({
+          transform: `translate(-50%, -50%)`
+        });
+        $('.js-main-title').css({
+          transform: `translate(-50%, -50%)`
+        });
+      });
     }
   };
 
@@ -144,3 +214,4 @@ function getScrollLeft() {
 function getScrollTop() {
   return document.documentElement.scrollTop || document.body.scrollTop;
 }
+
