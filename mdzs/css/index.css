@@ -462,7 +462,8 @@ footer {
     cursor: none;
 }
 
-.right-fixed-div2:hover {
+.right-fixed-div2:hover,
+.right-fixed-div2.active {
     background-position: -164px 0;    
 }
 
@@ -474,7 +475,8 @@ footer {
     margin-top: 10px;
 }
 
-.right-fixed-div3:hover {
+.right-fixed-div3:hover,
+.right-fixed-div3.active {
     background-position: -164px -56px;    
 }
 
@@ -486,7 +488,8 @@ footer {
     margin-top: 10px;
 }
 
-.right-fixed-div4:hover {
+.right-fixed-div4:hover,
+.right-fixed-div4.active {
     background-position: -164px -112px;    
 }
 

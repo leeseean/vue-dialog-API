@@ -49,7 +49,9 @@ if (!Array.prototype.fill) {
       this.initRightFixedPosition();
       this.initGoToTop();
       this.initVideo();
+      this.initScrollBar();
       this.initMoveByMouse();
+      this.initRightFixedNav();
     },
     initMasonry() {
       const horizontalImgs = Array(41).fill(0).map((item, index) => {
@@ -77,7 +79,6 @@ if (!Array.prototype.fill) {
                 `;
       }).join('');
       $('.js-masonry').html(masonryItemsHtml);
-      this.initScrollBar();
       $('.js-masonry-item').off('click').on('click', function () {
         const src = $(this).attr('url');
         dialog({
@@ -89,12 +90,7 @@ if (!Array.prototype.fill) {
       });
     },
     initRightFixedPosition() {
-      let mainContentWidth;
-      if (screen.width > 1440) {
-        mainContentWidth = 1240;
-      } else {
-        mainContentWidth = 960;          
-      }
+      const mainContentWidth = $('.js-head-wrapper')[0].offsetWidth;
       const screenWidth = window.screen.width;
       let rightFixedRight = (screenWidth - mainContentWidth) / 2 - $('.js-right-fixed')[0].offsetWidth - 10;
       rightFixedRight = rightFixedRight < 0 ? 0 : rightFixedRight;
@@ -121,6 +117,24 @@ if (!Array.prototype.fill) {
           $('.js-to-top').addClass('show');
         } else {
           $('.js-to-top').removeClass('show');
+        }
+      });
+    },
+    initRightFixedNav() {//
+      $(window).scroll(() => {
+        const scrollTop = $(window).scrollTop();
+        if (scrollTop > 360 && scrollTop <= 720) {
+          $('.js-fixed-video').addClass('active');
+          $('.js-fixed-masonry').removeClass('active');
+          $('.js-fixed-introduction').removeClass('active');
+        } else if (scrollTop > 720 && scrollTop <= 1600) {
+          $('.js-fixed-masonry').addClass('active');
+          $('.js-fixed-video').removeClass('active');
+          $('.js-fixed-introduction').removeClass('active');
+        } else if (scrollTop > 1600) {
+          $('.js-fixed-introduction').addClass('active');
+          $('.js-fixed-masonry').removeClass('active');
+          $('.js-fixed-video').removeClass('active');
         }
       });
     },
