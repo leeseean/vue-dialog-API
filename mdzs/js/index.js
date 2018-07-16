@@ -123,7 +123,11 @@ if (!Array.prototype.fill) {
     initRightFixedNav() {//根据滚动的位置点亮右侧固定栏导航
       $(window).scroll(() => {
         const scrollTop = $(window).scrollTop();
-        if (scrollTop > 360 && scrollTop <= 720) {
+        if (scrollTop <= 360) {
+          $('.js-fixed-video').removeClass('active');
+          $('.js-fixed-masonry').removeClass('active');
+          $('.js-fixed-introduction').removeClass('active');
+        } else if (scrollTop > 360 && scrollTop <= 720) {
           $('.js-fixed-video').addClass('active');
           $('.js-fixed-masonry').removeClass('active');
           $('.js-fixed-introduction').removeClass('active');
