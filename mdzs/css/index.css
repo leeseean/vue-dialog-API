@@ -1,5 +1,6 @@
 body {
     background: url(../img/common_bg.jpg) top center no-repeat;
+    background-attachment: fixed;
 }
 
 header {
@@ -160,6 +161,7 @@ header {
 .content-3 {
     height: 1075px;
     background: url(../img/common_bg.jpg) top center no-repeat;
+    background-attachment: fixed;
     position: relative;
 }
 
