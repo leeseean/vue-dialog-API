@@ -16,6 +16,10 @@ var paths = {
     src: ['./css/reset.css', './css/index.css'],
     dest: './dist/'
   },
+  styles1440: {
+    src: ['./css/reset.css', './css/index.1440.css'],
+    dest: './dist/'
+  },
   scripts: {
     src: ['./js/*.js'],
     dest: './dist/'
@@ -68,6 +72,14 @@ function styles() {
     .pipe(gulp.dest(paths.styles.dest));
 }
 
+function styles1440() {
+  return gulp.src(paths.styles1440.src)
+    .pipe(cleanCSS())
+    // pass in options to the stream
+    .pipe(concat('index.min.1440.css'))
+    .pipe(gulp.dest(paths.styles1440.dest));
+}
+
 function scripts() {
   return gulp.src(paths.scripts.src, {
       sourcemaps: true
@@ -102,7 +114,7 @@ function watch() {
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-var build = gulp.series(clean, gulp.parallel(htmls, styles, scripts, vendor, img));
+var build = gulp.series(clean, gulp.parallel(htmls, styles, styles1440, scripts, vendor, img));
 
 /*
  * You can still use `gulp.task` to expose tasks

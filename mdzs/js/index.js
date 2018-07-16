@@ -89,8 +89,14 @@ if (!Array.prototype.fill) {
       });
     },
     initRightFixedPosition() {
+      let mainContentWidth;
+      if (screen.width > 1440) {
+        mainContentWidth = 1240;
+      } else {
+        mainContentWidth = 960;          
+      }
       const screenWidth = window.screen.width;
-      let rightFixedRight = (screenWidth - 1240) / 2 - $('.js-right-fixed')[0].offsetWidth - 80;
+      let rightFixedRight = (screenWidth - mainContentWidth) / 2 - $('.js-right-fixed')[0].offsetWidth - 10;
       rightFixedRight = rightFixedRight < 0 ? 0 : rightFixedRight;
       $('.js-right-fixed').css({
         right: rightFixedRight

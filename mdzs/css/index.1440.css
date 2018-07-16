@@ -1,5 +1,5 @@
 body {
-    background: url(../img/common_bg.jpg) top center no-repeat;
+    background: url(../img/common_bg1440.jpg) top center no-repeat;
 }
 
 header {
@@ -7,7 +7,7 @@ header {
 }
 
 .head-wrapper {
-    width: 1240px;
+    width: 960px;
     margin: 0 auto;
     height: 36px;
     line-height: 36px;
@@ -18,15 +18,15 @@ header {
     width: 24px;
     height: 24px;
     background-size: cover;
-    margin-top: 6px;
+    margin-top: 7px;
 }
 
 .head-logo-text {
-    background: url(../img/css_set.png) top left no-repeat;
-    background-position: -35px -230px;
+    background: url(../img/css_set1440.png) top left no-repeat;
+    background-position: -16px -197px;
     width: 188px;
     height: 18px;
-    margin-top: 9px;
+    margin-top: 10px;
     margin-left: 10px;
 }
 
@@ -56,12 +56,12 @@ header {
     position: absolute;
     left: 50%;
     top: 50%;
-    background-image: url(../img/main_fire.png);
+    background-image: url(../img/main_fire1440.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    width: 1600px;
-    height: 407px;
+    width: 1024px;
+    height: 260px;
     transform: translate(-50%, -50%);
     transition: all .1s ease-in-out;
 }
@@ -70,12 +70,12 @@ header {
     position: absolute;
     left: 50%;
     top: 50%;
-    background-image: url(../img/main_title.png);
+    background-image: url(../img/main_title1440.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
-    width: 661px;
-    height: 564px;
+    width: 553px;
+    height: 499px;
     transform: translate(-50%, -50%);
     transition: all .1s ease-in-out;
 }
@@ -84,7 +84,7 @@ header {
     position: absolute;
     left: 50%;
     top: 50%;
-    width: 1240px;
+    width: 960px;
     height: 100%;
     transform: translate(-50%, -50%);
 }
@@ -98,22 +98,22 @@ header {
     background-size: cover;
     background-position: top center;
     width: 12px;
-    height: 450px;
+    height: 360px;
     transform: translateY(-50%);
     transition: all .1s ease-in-out; 
 }
 
 .content-2 {
-    height: 368px;
+    height: 276px;
     position: relative;
     z-index: 2;
-    background-image: url(../img/title_2bg.jpg);
+    background-image: url(../img/title_2bg1440.jpg);
     background-repeat: no-repeat;
 }
 
 .content-2-inner-wrapper {
     position: absolute;
-    width: 1240px;
+    width: 960px;
     height: 100%;
     left: 50%;
     top: 50%;
@@ -125,12 +125,12 @@ header {
 }
 
 .video-min-title {
-    width: 358px;
-    height: 109px;
-    background: url(../img/video_min_title.png) top center no-repeat;
+    width: 250px;
+    height: 76px;
+    background: url(../img/video_min_title1440.png) top center no-repeat;
     position: absolute;
-    left: 40px;
-    top: 50px;
+    left: 45px;
+    top: 36px;
 }
 
 .hide {
@@ -138,19 +138,19 @@ header {
 }
 
 .btn-video {
-    width: 96px;
-    height: 96px;
-    background: url(../img/btn_video.png) top center no-repeat;
+    width: 72px;
+    height: 72px;
+    background: url(../img/btn_video1440.png) top center no-repeat;
     position: absolute;
-    left: 171px;
-    top: 156px;
+    left: 132px;
+    top: 108px;
     cursor: pointer;
 }
 
 .title-2 {
-    width: 430px;
-    height: 480px;
-    background: url(../img/title_2.png) top center no-repeat;
+    width: 380px;
+    height: 420px;
+    background: url(../img/title_21440.png) top center no-repeat;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -158,8 +158,8 @@ header {
 }
 
 .content-3 {
-    height: 1075px;
-    background: url(../img/common_bg.jpg) top center no-repeat;
+    height: 800px;
+    background: url(../img/common_bg1440.jpg) top center no-repeat;
     position: relative;
 }
 
@@ -168,12 +168,12 @@ header {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 1240px;
-    height: 720px;    
+    width: 930px;
+    height: 500px;    
 }
 
 .img-box-wrapper {
-    width: 1240px;
+    width: 930px;
     overflow: hidden;
     position: absolute;
     left: 50%;
@@ -183,26 +183,26 @@ header {
     background: rgba(0, 0, 0, 0.60);
     border: 1px solid #4E442C;
     box-shadow: 0 10px 40px 0 #000000;
-    padding-bottom: 11px;
+    padding-bottom: 8px;
 }
 
 .img-box {
-    width: 1257px;
-    height: 720px;
+    width: 947px;
+    height: 500px;
     box-sizing: border-box;
-    padding: 11px;
+    padding: 8px;
     overflow-y: scroll;
 }
 
 .masonry {
-    -moz-column-count: 4;
+    -moz-column-count: 3;
     /* Firefox */
-    -webkit-column-count: 4;
+    -webkit-column-count: 3;
     /* Safari 和 Chrome */
-    column-count: 4;
-    -moz-column-gap: 6px;
-    -webkit-column-gap: 6px;
-    column-gap: 6px;
+    column-count: 3;
+    -moz-column-gap: 7px;
+    -webkit-column-gap: 7px;
+    column-gap: 7px;
     width: 100%;
     margin: 0 auto;
 }
@@ -217,13 +217,13 @@ header {
 .item__content.horizontal {
     width: 300px;
     height: 198px;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
 }
 
 .item__content.vertical {
     width: 300px;
     height: 402px;
-    margin-bottom: 6px;
+    margin-bottom: 7px;
 }
 
 .item:hover {
@@ -247,8 +247,8 @@ header {
 }
 
 .content-3-text {
-    letter-spacing: 5px;
-    font-size: 24px;
+    letter-spacing: 4px;
+    font-size: 18px;
     color: #FFFFFF;
     text-align: center;
     position: absolute;
@@ -258,17 +258,17 @@ header {
 }
 
 .content-4 {
-    height: 368px;
-    background-image: url(../img/title_3bg.jpg);
+    height: 276px;
+    background-image: url(../img/title_3bg1440.jpg);
     background-repeat: no-repeat;
     z-index: 2;
     position: relative;
 }
 
 .title-3 {
-    width: 405px;
-    height: 572px;
-    background: url(../img/title_3.png) top center no-repeat;
+    width: 326px;
+    height: 460px;
+    background: url(../img/title_31440.png) top center no-repeat;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -277,26 +277,26 @@ header {
 
 .content-4-text {
     position: absolute;
-    right: 40px;
-    top: 50px;
+    right: 35px;
+    top: 69px;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
     color: #FFFFFF;
     line-height: 2;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 }
 
 .title-self {
-    font-size: 24px;
-    letter-spacing: 5px;
+    font-size: 18px;
+    letter-spacing: 4px;
 }
 
 .title-bottom-bar {
-    width: 308px;
-    height: 30px;
-    background-image: url(../img/css_set.png);
+    width: 242px;
+    height: 24px;
+    background-image: url(../img/css_set1440.png);
     background-repeat: no-repeat;
-    background-position: 0px -200px;
+    background-position: 0px -145px;
     left: 50%;
     transform: translateX(-50%);
     position: relative;
@@ -308,41 +308,41 @@ header {
 
 .title-bottom-text {
     line-height: 3;
-    letter-spacing: 5px;
+    letter-spacing: 3px;
 }
 
 .content-5 {
-    height: 368px;
-    background-image: url(../img/bottom_bg.jpg);
+    height: 290px;
+    background-image: url(../img/bottom_bg1440.jpg);
     background-repeat: no-repeat;
     position: relative;
 }
 
 .content-5-text {
-    font-size: 24px;
+    font-size: 18px;
     color: #FFFFFF;
-    letter-spacing: 5px;
+    letter-spacing: 4px;
     position: absolute;
-    right: 44px;
+    right: 24px;
     bottom: 26px;
 }
 
 .content-5-line {
     position: absolute;
-    right: 54px;
+    right: 34px;
     height: 2px;
-    width: 230px;
+    width: 168px;
     background: #E4C17E;
     bottom: 18px;
 }
 
 .horse-btn {
-    width: 397px;
-    height: 252px;
-    background: url(../img/horse_btn.png) top center no-repeat;
+    width: 284px;
+    height: 180px;
+    background: url(../img/horse_btn1440.png) top center no-repeat;
     position: absolute;
     left: 50%;
-    bottom: 32px;
+    bottom: 0px;
     transform: translateX(-50%);
 }
 
@@ -351,10 +351,10 @@ footer {
 }
 
 .foot-wrapper {
-    width: 1240px;
+    width: 960px;
     margin: 0 auto;
-    height: 80px;
-    line-height: 80px;
+    height: 60px;
+    line-height: 60px;
 }
 
 .foot-logo {
@@ -362,7 +362,7 @@ footer {
     width: 24px;
     height: 24px;
     background-size: cover;
-    margin-top: 28px;
+    margin-top: 18px;
 }
 
 .foot-logo-text {
@@ -384,7 +384,7 @@ footer {
 }
 
 .foot-contract-link {
-    margin-right: 50px;
+    margin-right: 24px;
 }
 
 .foot-contract-link:hover {
@@ -453,58 +453,58 @@ footer {
 }
 
 .right-fixed-div1 {
-    width: 160px;
-    height: 38px;
-    background: url(../img/css_set.png) no-repeat;
-    background-position: -32px -248px;
+    width: 100px;
+    height: 24px;
+    background: url(../img/css_set1440.png) no-repeat;
+    background-position: -33px -169px;
     cursor: none;
 }
 
 .right-fixed-div2:hover {
-    background-position: -164px 0;    
+    background-position: -120px 0;    
 }
 
 .right-fixed-div2 {
-    width: 164px;
-    height: 48px;
-    background: url(../img/css_set.png) no-repeat;
+    width: 120px;
+    height: 36px;
+    background: url(../img/css_set1440.png) no-repeat;
     background-position: 0 0;
     margin-top: 10px;
 }
 
 .right-fixed-div3:hover {
-    background-position: -164px -56px;    
+    background-position: -120px -41px;    
 }
 
 .right-fixed-div3 {
-    width: 164px;
-    height: 48px;
-    background: url(../img/css_set.png) no-repeat;
-    background-position: 0 -58px;;
+    width: 120px;
+    height: 36px;
+    background: url(../img/css_set1440.png) no-repeat;
+    background-position: 0 -41px;;
     margin-top: 10px;
 }
 
 .right-fixed-div4:hover {
-    background-position: -164px -112px;    
+    background-position: -120px -82px;    
 }
 
 .right-fixed-div4 {
-    width: 164px;
-    height: 48px;
-    background: url(../img/css_set.png) no-repeat;
-    background-position: 0 -116px;
+    width: 120px;
+    height: 36px;
+    background: url(../img/css_set1440.png) no-repeat;
+    background-position: 0 -82px;
     margin-top: 10px;
 }
 
 .right-fixed-div5:hover {
-    background-position: -164px -168px;    
+    background-position: -120px -122px;    
 }
 
 .right-fixed-div5 {
-    width: 164px;
-    height: 30px;
-    background: url(../img/css_set.png) no-repeat;
-    background-position: 0 -168px;
+    width: 120px;
+    height: 20px;
+    background: url(../img/css_set1440.png) no-repeat;
+    background-position: 0 -122px;
     margin-top: 10px;
     opacity: 0;
 }
@@ -521,7 +521,7 @@ footer {
     position: absolute;
     top: 18px;
     right: -36px;
-    height: 684px;
+    height: 464px;
     width: 18px;
     background-image: url(../img/image_track.svg);
     background-position: top center;
