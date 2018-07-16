@@ -113,14 +113,14 @@ if (!Array.prototype.fill) {
     },
     initGoToTop() {
       $(window).scroll(() => {
-        if ($(window).scrollTop() > 300) {
+        if ($(window).scrollTop() > 720) {
           $('.js-to-top').addClass('show');
         } else {
           $('.js-to-top').removeClass('show');
         }
       });
     },
-    initRightFixedNav() {//
+    initRightFixedNav() {//根据滚动的位置点亮右侧固定栏导航
       $(window).scroll(() => {
         const scrollTop = $(window).scrollTop();
         if (scrollTop > 360 && scrollTop <= 720) {
