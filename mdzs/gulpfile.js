@@ -13,11 +13,11 @@ var paths = {
     dest: './dist/'
   },
   styles: {
-    src: ['./css/reset.css', './css/index.css'],
+    src: ['./css/reset.css','./css/swiper.min.css', './css/index.css'],
     dest: './dist/'
   },
   styles1440: {
-    src: ['./css/reset.css', './css/index.1440.css'],
+    src: ['./css/reset.css','./css/swiper.min.css', './css/index.1440.css'],
     dest: './dist/'
   },
   scripts: {
@@ -31,6 +31,10 @@ var paths = {
   img: {
     src: ['./img/**/*'],
     dest: './dist/img'
+  },
+  media: {
+    src: ['./media/**/*'],
+    dest: './dist/media'
   }
 };
 
@@ -103,6 +107,11 @@ function img() {
     .pipe(gulp.dest(paths.img.dest));
 }
 
+function media() {
+  return gulp.src(paths.media.src)
+    .pipe(gulp.dest(paths.media.dest));
+}
+
 function watch() {
   gulp.watch(paths.scripts.src, scripts);
   gulp.watch(paths.vender.src, vendor);
@@ -114,7 +123,7 @@ function watch() {
 /*
  * Specify if tasks run in series or parallel using `gulp.series` and `gulp.parallel`
  */
-var build = gulp.series(clean, gulp.parallel(htmls, styles, styles1440, scripts, vendor, img));
+var build = gulp.series(clean, gulp.parallel(htmls, styles, styles1440, scripts, vendor, img, media));
 
 /*
  * You can still use `gulp.task` to expose tasks
